@@ -1,0 +1,71 @@
+﻿  Source.cpp
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(158): warning C4244: аргумент: преобразование "_Ty" в "T", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(168): warning C4244: аргумент: преобразование "_Ty" в "T", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(246): warning C4244: аргумент: преобразование "_Ty" в "float", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(257): warning C4244: аргумент: преобразование "_Ty" в "float", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(257): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(268): warning C4244: аргумент: преобразование "_Ty" в "float", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(277): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(279): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(294): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(296): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(308): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(319): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(371): warning C4244: аргумент: преобразование "double" в "size_t", возможна потеря данных
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(375): warning C4244: аргумент: преобразование "_Ty" в "T", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(393): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(394): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(403): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(404): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(412): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(413): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\rayfat\source\repos\myplotengine\myplotengine\source.cpp(422): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  MyplotEngine.vcxproj -> C:\Users\Rayfat\source\repos\MyplotEngine\x64\Debug\MyplotEngine.exe
