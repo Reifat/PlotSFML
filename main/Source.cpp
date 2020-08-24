@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <algorithm>
@@ -17,9 +17,9 @@ public:
 	{
 		gridX = n_x;
 		gridY = n_y;
-		creatCoordinateSystem();  // Инициализация осей координат
-		setGrid(n_x, n_y);		  // Инициализация координатной сетки
-		Construction();			  // Рендер осей координат и масштабной сетки
+		creatCoordinateSystem();  // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РѕСЃРµР№ РєРѕРѕСЂРґРёРЅР°С‚
+		setGrid(n_x, n_y);		  // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РєРѕРѕСЂРґРёРЅР°С‚РЅРѕР№ СЃРµС‚РєРё
+		Construction();			  // Р РµРЅРґРµСЂ РѕСЃРµР№ РєРѕРѕСЂРґРёРЅР°С‚ Рё РјР°СЃС€С‚Р°Р±РЅРѕР№ СЃРµС‚РєРё
 		plot_run(X, Y);
 
 		std::thread plot([&]()
@@ -35,7 +35,7 @@ public:
 						window.close();
 				}
 
-				// Отрисовка
+				// РћС‚СЂРёСЃРѕРІРєР°
 				if (!pause.load())
 				{
 					window.clear(sf::Color(232, 232, 232, 255));
@@ -70,10 +70,10 @@ public:
 		source.resize(2);
 		source[0] = X;
 		source[1] = Y;
-		ThinningFucnt(source[0], source[1]); // Прореживание функции
-		ScaleFunct(Thinning_X, Thinning_Y);  // Масштабирование принятой функции для окна вывода
-		RenderFunction();					 // Рендеринг функции
-		setSignaturesGrid(gridX, gridY);     // Раставить подписи координатной сетки
+		ThinningFucnt(source[0], source[1]); // РџСЂРѕСЂРµР¶РёРІР°РЅРёРµ С„СѓРЅРєС†РёРё
+		ScaleFunct(Thinning_X, Thinning_Y);  // РњР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёРµ РїСЂРёРЅСЏС‚РѕР№ С„СѓРЅРєС†РёРё РґР»СЏ РѕРєРЅР° РІС‹РІРѕРґР°
+		RenderFunction();					 // Р РµРЅРґРµСЂРёРЅРі С„СѓРЅРєС†РёРё
+		setSignaturesGrid(gridX, gridY);     // Р Р°СЃС‚Р°РІРёС‚СЊ РїРѕРґРїРёСЃРё РєРѕРѕСЂРґРёРЅР°С‚РЅРѕР№ СЃРµС‚РєРё
 		pause.store(false);
 	}
 
@@ -94,30 +94,30 @@ public:
 	}
 
 private:
-	//Свойства
-	int width = 600;  //Длина окна в пиксилях
-	int height = 400; // Высота окна в пикселях
-	std::vector<std::vector<int>> XY; // Массив точек для построение системы координат
-	std::vector<std::vector<int>> GridXY; // Массив точек для построения координатной сетки
-	sf::VertexArray System; // Рендорит системо координат
-	sf::VertexArray Grid;	// Рендерит координатную сетку
-	std::vector<std::vector<int>> ScaleFunction; // Смаштабированная функция
-	sf::VertexArray RenderFunct; // Рендерит график функции
-	sf::Font font;     // Инициализация шрифта
-	sf::Text Title[3]; // Названия осей координат и графика
-	std::vector<sf::Text> SignaturesGrid[2]; // Подписи для сетки
-	std::vector<std::vector<double>> source; // Исходные данные функии 
-	std::vector<double> Thinning_X; // Прореженный ряд X
-	std::vector<double> Thinning_Y; // Прореженный ряд Y
-	int f_0_Y; // Указывает координаты на положение нуля оси Y графика функции
-	int f_0_X; // Указывает координаты на положение нуля оси X графика функции
-	int step[2] = {0,0}; // Шаг для сетки осей
+	//РЎРІРѕР№СЃС‚РІР°
+	int width = 600;  //Р”Р»РёРЅР° РѕРєРЅР° РІ РїРёРєСЃРёР»СЏС…
+	int height = 400; // Р’С‹СЃРѕС‚Р° РѕРєРЅР° РІ РїРёРєСЃРµР»СЏС…
+	std::vector<std::vector<int>> XY; // РњР°СЃСЃРёРІ С‚РѕС‡РµРє РґР»СЏ РїРѕСЃС‚СЂРѕРµРЅРёРµ СЃРёСЃС‚РµРјС‹ РєРѕРѕСЂРґРёРЅР°С‚
+	std::vector<std::vector<int>> GridXY; // РњР°СЃСЃРёРІ С‚РѕС‡РµРє РґР»СЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚РЅРѕР№ СЃРµС‚РєРё
+	sf::VertexArray System; // Р РµРЅРґРѕСЂРёС‚ СЃРёСЃС‚РµРјРѕ РєРѕРѕСЂРґРёРЅР°С‚
+	sf::VertexArray Grid;	// Р РµРЅРґРµСЂРёС‚ РєРѕРѕСЂРґРёРЅР°С‚РЅСѓСЋ СЃРµС‚РєСѓ
+	std::vector<std::vector<int>> ScaleFunction; // РЎРјР°С€С‚Р°Р±РёСЂРѕРІР°РЅРЅР°СЏ С„СѓРЅРєС†РёСЏ
+	sf::VertexArray RenderFunct; // Р РµРЅРґРµСЂРёС‚ РіСЂР°С„РёРє С„СѓРЅРєС†РёРё
+	sf::Font font;     // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ С€СЂРёС„С‚Р°
+	sf::Text Title[3]; // РќР°Р·РІР°РЅРёСЏ РѕСЃРµР№ РєРѕРѕСЂРґРёРЅР°С‚ Рё РіСЂР°С„РёРєР°
+	std::vector<sf::Text> SignaturesGrid[2]; // РџРѕРґРїРёСЃРё РґР»СЏ СЃРµС‚РєРё
+	std::vector<std::vector<double>> source; // РСЃС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ С„СѓРЅРєРёРё 
+	std::vector<double> Thinning_X; // РџСЂРѕСЂРµР¶РµРЅРЅС‹Р№ СЂСЏРґ X
+	std::vector<double> Thinning_Y; // РџСЂРѕСЂРµР¶РµРЅРЅС‹Р№ СЂСЏРґ Y
+	int f_0_Y; // РЈРєР°Р·С‹РІР°РµС‚ РєРѕРѕСЂРґРёРЅР°С‚С‹ РЅР° РїРѕР»РѕР¶РµРЅРёРµ РЅСѓР»СЏ РѕСЃРё Y РіСЂР°С„РёРєР° С„СѓРЅРєС†РёРё
+	int f_0_X; // РЈРєР°Р·С‹РІР°РµС‚ РєРѕРѕСЂРґРёРЅР°С‚С‹ РЅР° РїРѕР»РѕР¶РµРЅРёРµ РЅСѓР»СЏ РѕСЃРё X РіСЂР°С„РёРєР° С„СѓРЅРєС†РёРё
+	int step[2] = {0,0}; // РЁР°Рі РґР»СЏ СЃРµС‚РєРё РѕСЃРµР№
 	int gridX;
 	int gridY;
 	std::atomic<bool> pause=false;
 
-	//Местоды
-	void ThinningFucnt(std::vector<double> &X, std::vector<double> &Y)  // Прореживание функции и запись исходной в буфер
+	//РњРµСЃС‚РѕРґС‹
+	void ThinningFucnt(std::vector<double> &X, std::vector<double> &Y)  // РџСЂРѕСЂРµР¶РёРІР°РЅРёРµ С„СѓРЅРєС†РёРё Рё Р·Р°РїРёСЃСЊ РёСЃС…РѕРґРЅРѕР№ РІ Р±СѓС„РµСЂ
 	{
 		if (source[0].size() > (width*2) && source[0].size() < (width * 20))
 		{
@@ -138,19 +138,19 @@ private:
 	{
 
 	}
-	void creatCoordinateSystem()  // Построение осей координат
+	void creatCoordinateSystem()  // РџРѕСЃС‚СЂРѕРµРЅРёРµ РѕСЃРµР№ РєРѕРѕСЂРґРёРЅР°С‚
 	{
 		double Proportion = (double)width / (double)height;
 		XY.resize(2, std::vector<int>(4));
-		// Задаем ось Y;
+		// Р—Р°РґР°РµРј РѕСЃСЊ Y;
 		/*"X"*/XY[0][0] = (int)round(width* 0.0666666666666666);			    XY[0][1] = (int)round(width*0.0666666666666666);
 		/*"Y"*/XY[1][0] = (int)round(height*0.0666666666666666*Proportion);		XY[1][1] = (int)round(height*(1 - 0.055*Proportion));
-		// Задаем ось X
+		// Р—Р°РґР°РµРј РѕСЃСЊ X
 		/*"X"*/XY[0][2] = (int)round(width*0.055);									XY[0][3] = (int)round(width*(1 - 0.0666666666666666));
 		/*"Y"*/XY[1][2] = (int)round(height*(1 - 0.0666666666666666*Proportion));	XY[1][3] = (int)round(height*(1 - 0.0666666666666666*Proportion));
 
 	}
-	void Construction(bool Grid=true) // Рендер осей координат и координатной сетки
+	void Construction(bool Grid=true) // Р РµРЅРґРµСЂ РѕСЃРµР№ РєРѕРѕСЂРґРёРЅР°С‚ Рё РєРѕРѕСЂРґРёРЅР°С‚РЅРѕР№ СЃРµС‚РєРё
 	{
 		System.setPrimitiveType(sf::PrimitiveType::Lines);
 		System.resize(XY[0].size() * 2);
@@ -169,46 +169,46 @@ private:
 			}
 		}
 	}
-	void setGrid(int n_x, int n_y) // Метод создает координатную сетку
+	void setGrid(int n_x, int n_y) // РњРµС‚РѕРґ СЃРѕР·РґР°РµС‚ РєРѕРѕСЂРґРёРЅР°С‚РЅСѓСЋ СЃРµС‚РєСѓ
 	{
 
 		GridXY.resize(4, std::vector <int>(n_x + n_y));
-		// Задаем шаг координатной сетки
-		// Для оси Y
+		// Р—Р°РґР°РµРј С€Р°Рі РєРѕРѕСЂРґРёРЅР°С‚РЅРѕР№ СЃРµС‚РєРё
+		// Р”Р»СЏ РѕСЃРё Y
 		step[1] = (int)trunc(((float)XY[1][2] - (float)(f_0_Y + XY[1][0])) / (float)n_y);
-		// Для оси X
+		// Р”Р»СЏ РѕСЃРё X
 		step[0] = (int)trunc(((float)XY[0][3] - (float)(f_0_X + XY[0][0])) / (float)n_x);
-		// Создание сетки для оси Y
-		for (int n = 1; n <= n_y; n++) // Задает начальные точки для сетки Y
+		// РЎРѕР·РґР°РЅРёРµ СЃРµС‚РєРё РґР»СЏ РѕСЃРё Y
+		for (int n = 1; n <= n_y; n++) // Р—Р°РґР°РµС‚ РЅР°С‡Р°Р»СЊРЅС‹Рµ С‚РѕС‡РєРё РґР»СЏ СЃРµС‚РєРё Y
 		{
-			/*"X"*/GridXY[0][n - 1] = XY[0][0]; // Ось икс конст
-			/*"Y"*/GridXY[1][n - 1] = XY[1][2] - step[1] * n; // Вычисляем только игрек
+			/*"X"*/GridXY[0][n - 1] = XY[0][0]; // РћСЃСЊ РёРєСЃ РєРѕРЅСЃС‚
+			/*"Y"*/GridXY[1][n - 1] = XY[1][2] - step[1] * n; // Р’С‹С‡РёСЃР»СЏРµРј С‚РѕР»СЊРєРѕ РёРіСЂРµРє
 		}
-		for (int n = 1; n <= n_y; n++) // Задает конечные точки для сетки Y
+		for (int n = 1; n <= n_y; n++) // Р—Р°РґР°РµС‚ РєРѕРЅРµС‡РЅС‹Рµ С‚РѕС‡РєРё РґР»СЏ СЃРµС‚РєРё Y
 		{
-			/*"X"*/GridXY[2][n - 1] = XY[0][3]; // Ось икс конст
-			/*"Y"*/GridXY[3][n - 1] = XY[1][2]- step[1] * n; // Вычисляем только игрек
+			/*"X"*/GridXY[2][n - 1] = XY[0][3]; // РћСЃСЊ РёРєСЃ РєРѕРЅСЃС‚
+			/*"Y"*/GridXY[3][n - 1] = XY[1][2]- step[1] * n; // Р’С‹С‡РёСЃР»СЏРµРј С‚РѕР»СЊРєРѕ РёРіСЂРµРє
 		}
-		// Создание сетки для оси Х
-		for (int n = n_y; n < n_x + n_y; n++) // Задает начальные точки для сетки X
+		// РЎРѕР·РґР°РЅРёРµ СЃРµС‚РєРё РґР»СЏ РѕСЃРё РҐ
+		for (int n = n_y; n < n_x + n_y; n++) // Р—Р°РґР°РµС‚ РЅР°С‡Р°Р»СЊРЅС‹Рµ С‚РѕС‡РєРё РґР»СЏ СЃРµС‚РєРё X
 		{
-			/*"X"*/GridXY[0][n] = step[0] * (n - (n_y - 1)) + XY[0][0]; // Вычисляем только икс
-			/*"Y"*/GridXY[1][n] = XY[1][2]; // Ось игрек конст
+			/*"X"*/GridXY[0][n] = step[0] * (n - (n_y - 1)) + XY[0][0]; // Р’С‹С‡РёСЃР»СЏРµРј С‚РѕР»СЊРєРѕ РёРєСЃ
+			/*"Y"*/GridXY[1][n] = XY[1][2]; // РћСЃСЊ РёРіСЂРµРє РєРѕРЅСЃС‚
 		}
-		for (int n = n_y; n < n_x + n_y; n++) // Задает начальные точки для сетки X
+		for (int n = n_y; n < n_x + n_y; n++) // Р—Р°РґР°РµС‚ РЅР°С‡Р°Р»СЊРЅС‹Рµ С‚РѕС‡РєРё РґР»СЏ СЃРµС‚РєРё X
 		{
-			/*"X"*/GridXY[2][n] = step[0] * (n - (n_y - 1)) + XY[0][0]; // Вычисляем только икс
-			/*"Y"*/GridXY[3][n] = XY[1][0]; // Ось игрек конст
+			/*"X"*/GridXY[2][n] = step[0] * (n - (n_y - 1)) + XY[0][0]; // Р’С‹С‡РёСЃР»СЏРµРј С‚РѕР»СЊРєРѕ РёРєСЃ
+			/*"Y"*/GridXY[3][n] = XY[1][0]; // РћСЃСЊ РёРіСЂРµРє РєРѕРЅСЃС‚
 		}
 	}
-	void setSignaturesGrid(int n_x, int n_y, bool m=false) // Метод подписывает координатную сетку
+	void setSignaturesGrid(int n_x, int n_y, bool m=false) // РњРµС‚РѕРґ РїРѕРґРїРёСЃС‹РІР°РµС‚ РєРѕРѕСЂРґРёРЅР°С‚РЅСѓСЋ СЃРµС‚РєСѓ
 	{
-		for (int i = 0; i < 2; i++) // Цикл заполняет массивы подписей (i=0 для X, i=1 для Y)
+		for (int i = 0; i < 2; i++) // Р¦РёРєР» Р·Р°РїРѕР»РЅСЏРµС‚ РјР°СЃСЃРёРІС‹ РїРѕРґРїРёСЃРµР№ (i=0 РґР»СЏ X, i=1 РґР»СЏ Y)
 		{
-			int Coordinate; // Флаг, указывает заполняющию координату(а число в флаге показывает на сколько частей разбивать ось)
-			int a; // Переменная помогает перемещаться по массиву сетки координат
+			int Coordinate; // Р¤Р»Р°Рі, СѓРєР°Р·С‹РІР°РµС‚ Р·Р°РїРѕР»РЅСЏСЋС‰РёСЋ РєРѕРѕСЂРґРёРЅР°С‚Сѓ(Р° С‡РёСЃР»Рѕ РІ С„Р»Р°РіРµ РїРѕРєР°Р·С‹РІР°РµС‚ РЅР° СЃРєРѕР»СЊРєРѕ С‡Р°СЃС‚РµР№ СЂР°Р·Р±РёРІР°С‚СЊ РѕСЃСЊ)
+			int a; // РџРµСЂРµРјРµРЅРЅР°СЏ РїРѕРјРѕРіР°РµС‚ РїРµСЂРµРјРµС‰Р°С‚СЊСЃСЏ РїРѕ РјР°СЃСЃРёРІСѓ СЃРµС‚РєРё РєРѕРѕСЂРґРёРЅР°С‚
 			int b;
-			switch (i) // Поднимает флаг указателя
+			switch (i) // РџРѕРґРЅРёРјР°РµС‚ С„Р»Р°Рі СѓРєР°Р·Р°С‚РµР»СЏ
 			{
 				case 0:
 					Coordinate = n_x;
@@ -221,20 +221,20 @@ private:
 					b = 23;
 				break;
 			}
-			SignaturesGrid[i].resize(Coordinate + 3); // Массив с подписями
+			SignaturesGrid[i].resize(Coordinate + 3); // РњР°СЃСЃРёРІ СЃ РїРѕРґРїРёСЃСЏРјРё
 			double step = (*std::max_element(source[i].begin(), source[i].end()) - *std::min_element(source[i].begin(), source[i].end()))/ Coordinate;
 			double tens_degre = round(log10(step));
-			int whole = (int)pow(10, abs(tens_degre)); // Возведем десятку в её степень чтобы после выделить целую часть чисел на подписях
+			int whole = (int)pow(10, abs(tens_degre)); // Р’РѕР·РІРµРґРµРј РґРµСЃСЏС‚РєСѓ РІ РµС‘ СЃС‚РµРїРµРЅСЊ С‡С‚РѕР±С‹ РїРѕСЃР»Рµ РІС‹РґРµР»РёС‚СЊ С†РµР»СѓСЋ С‡Р°СЃС‚СЊ С‡РёСЃРµР» РЅР° РїРѕРґРїРёСЃСЏС…
 
 			for (int n = 0; n < SignaturesGrid[i].size(); n++)
 			{
-				SignaturesGrid[i][n].setFont(font);  // Устанавливаем шрифт
-				SignaturesGrid[i][n].setCharacterSize(11); // Устанавливаем размер шрифта
+				SignaturesGrid[i][n].setFont(font);  // РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј С€СЂРёС„С‚
+				SignaturesGrid[i][n].setCharacterSize(11); // РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј СЂР°Р·РјРµСЂ С€СЂРёС„С‚Р°
 				SignaturesGrid[i][n].setFillColor(sf::Color(64, 64, 64, 255));
 
 				if (n < Coordinate)
 				{
-					if (tens_degre < 0) // Если числа на оси меньше 1цы
+					if (tens_degre < 0) // Р•СЃР»Рё С‡РёСЃР»Р° РЅР° РѕСЃРё РјРµРЅСЊС€Рµ 1С†С‹
 					{
 						double numbeer = (*std::min_element(source[i].begin(), source[i].end()) + step * (n + 1)) * whole;
 						std::string Intermediate = std::to_string(numbeer);
@@ -327,7 +327,7 @@ private:
 	}
 	void ScaleFunct(std::vector<double> &X, std::vector<double> &Y)
 	{
-		// Масштабирование для Y
+		// РњР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёРµ РґР»СЏ Y
 		ScaleFunction.resize(2, std::vector<int>(Y.size()));
 		double max_Y = *std::max_element(Y.begin(), Y.end());
 		double min_Y = *std::min_element(Y.begin(), Y.end());
@@ -345,7 +345,7 @@ private:
 			for (int n = 0; n < X.size(); n++)
 				ScaleFunction[1][n] = XY[1][2] - ScaleFunction[1][n];
 		}
-		// Масштабирование для X
+		// РњР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёРµ РґР»СЏ X
 		double max_X = *std::max_element(X.begin(), X.end());
 		double min_X = *std::min_element(X.begin(), X.end());
 		double K_X = abs((max_X - min_X) / ((double)XY[0][3] - (double)XY[0][1]));
@@ -378,7 +378,7 @@ private:
 	}
 	int  setTitle(std::string Label, std::wstring &Text)
 	{
-		// Создание текста
+		// РЎРѕР·РґР°РЅРёРµ С‚РµРєСЃС‚Р°
 		if (!font.loadFromFile("times.ttf"))
 		{
 			return EXIT_FAILURE;
@@ -435,9 +435,9 @@ int main()
 		//S.push_back(pow(t[n],2)+2*t[n]-50);
 	}
 	Plot Create;
-	Create.setTitle(L"График амплитудной модуляции");
-	Create.setLabel_X(L"Секунды");
-	Create.setLabel_Y(L"Значение отсчетов");
+	Create.setTitle(L"Р“СЂР°С„РёРє Р°РјРїР»РёС‚СѓРґРЅРѕР№ РјРѕРґСѓР»СЏС†РёРё");
+	Create.setLabel_X(L"РЎРµРєСѓРЅРґС‹");
+	Create.setLabel_Y(L"Р—РЅР°С‡РµРЅРёРµ РѕС‚СЃС‡РµС‚РѕРІ");
 
 	Create.plot(t, S);
     double k = T;
